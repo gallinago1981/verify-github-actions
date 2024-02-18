@@ -28,7 +28,7 @@ jobs:
         run: ./gradlew clean test
         continue-on-error: true
       - name: cat
-        run:  /home/runner/work/verify-github-actions/verify-github-actions/.gradle/kotlin/errors/*.log
+        run:  cat /home/runner/work/verify-github-actions/verify-github-actions/.gradle/kotlin/errors/*.log
       - name: ls test class
         run: ls -R  /home/runner/work/verify-github-actions/verify-github-actions/build/classes/kotlin/test
       - name: run test
