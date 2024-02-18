@@ -24,6 +24,10 @@ jobs:
           architecture: x64
       - name: Make gradlew executable
         run: chmod +x ./gradlew
+      - name: test create multibyte word file
+        run: touch 1-正常.txt
+      - name: confirm
+        run: ls
       - name: build
         run: ./gradlew -Dfile.encoding=UTF-8 compileTestKotlin
         continue-on-error: true
