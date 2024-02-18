@@ -40,4 +40,6 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+    jvmArgs("-Dfile.encoding=UTF-8")
 }
+
