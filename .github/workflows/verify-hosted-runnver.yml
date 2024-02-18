@@ -22,13 +22,13 @@ jobs:
           java-version: '17'
           java-package: jdk
           architecture: x64
-      - name: cat
-        run: cat src/test/kotlin/verify/verifygithubactions/controller/SimpleControllerTest.kt
       - name: Make gradlew executable
         run: chmod +x ./gradlew
       - name: build
         run: ./gradlew clean test
         continue-on-error: true
+      - name: cat
+        run:  /home/runner/work/verify-github-actions/verify-github-actions/.gradle/kotlin/errors/*.log
       - name: ls test class
         run: ls -R  /home/runner/work/verify-github-actions/verify-github-actions/build/classes/kotlin/test
       - name: run test
