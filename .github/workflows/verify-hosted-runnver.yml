@@ -1,0 +1,26 @@
+name: "hosted runner"
+on:
+  push:
+    branches:
+      - '*'
+env:
+  LANG: ja_JP.UTF-8
+jobs:
+  test:
+    runs-on: ubuntu-2204:2023.04.2
+    steps:
+      - name: locale
+        run: locale
+      - name: echo lang
+        run: echo $LANG
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'corretto'
+          java-version: '17'
+          java-package: jdk
+          architecture: x64
+      - name: run test
+        run: ./gradlew clean test
