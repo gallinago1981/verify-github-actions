@@ -24,5 +24,9 @@ jobs:
           architecture: x64
       - name: Make gradlew executable
         run: chmod +x ./gradlew
+      - name: build
+        run: ./gradle build -x test
+      - name: ls test class
+        run: ls -la build/classes/kotlin/test
       - name: run test
         run: LC_ALL="ja_JP.UTF-8" ./gradlew clean test
