@@ -10,6 +10,8 @@ plugins {
 group = "verify"
 version = "0.0.1-SNAPSHOT"
 
+
+
 java {
     sourceCompatibility = JavaVersion.VERSION_17
 }
@@ -36,6 +38,10 @@ tasks.withType<KotlinCompile> {
         jvmTarget = "17"
 
     }
+}
+
+tasks.withType<JavaCompile> {
+    options.encoding = "UTF-8"
 }
 
 tasks.withType<Test> {
