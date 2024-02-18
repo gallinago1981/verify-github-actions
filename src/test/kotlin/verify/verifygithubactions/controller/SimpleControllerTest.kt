@@ -32,7 +32,7 @@ class SimpleControllerTest {
     @Nested
     inner class SuccessTest {
         @Test
-        fun `正常`() {
+        fun 正常() {
             Given {
                 contentType(ContentType.JSON)
                 params("message", "junit")
@@ -49,7 +49,7 @@ class SimpleControllerTest {
     @Nested
     inner class FailedTest {
         @Test
-        fun `必須チェック`() {
+        fun 必須チェック() {
             Given {
                 contentType(ContentType.JSON)
             } When {

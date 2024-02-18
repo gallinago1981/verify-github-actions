@@ -13,6 +13,8 @@ jobs:
         run: locale
       - name: echo lang
         run: echo $LANG
+      - name: install langage pack
+        run: sudo apt install language-pack-ja
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup java
