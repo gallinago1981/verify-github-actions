@@ -25,7 +25,7 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
       - name: build
-        run: ./gradlew compileTestKotlin
+        run: ./gradlew -Dfile.encoding=UTF-8 compileTestKotlin
         continue-on-error: true
       - name: ls test class
         run: ls -R  /home/runner/work/verify-github-actions/verify-github-actions/build/classes/kotlin/test

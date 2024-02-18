@@ -33,7 +33,6 @@ dependencies {
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs += "-Xjsr305=strict"
-        freeCompilerArgs += "-Dfile.encoding=UTF-8"
         jvmTarget = "17"
 
     }
