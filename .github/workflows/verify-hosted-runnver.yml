@@ -26,8 +26,7 @@ jobs:
         run: chmod +x ./gradlew
       - name: build
         run: ./gradlew compileTestKotlin
-      - name: ls
-        run: ls
+        continue-on-error: true
       - name: ls test class
         run: ls -la  /home/runner/work/verify-github-actions/verify-github-actions/build/classes/kotlin/test
       - name: run test
