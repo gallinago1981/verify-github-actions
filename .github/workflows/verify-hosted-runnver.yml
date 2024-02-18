@@ -22,6 +22,8 @@ jobs:
           java-version: '17'
           java-package: jdk
           architecture: x64
+      - name: cat
+        run: cat src/test/kotlin/verify/verifygithubactions/controller/SimpleControllerTest.kt
       - name: Make gradlew executable
         run: chmod +x ./gradlew
       - name: build
