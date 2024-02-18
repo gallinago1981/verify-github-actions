@@ -25,7 +25,7 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
       - name: build
-        run: ./gradle build -x test
+        run: ./gradlew build -x test
       - name: ls test class
         run: ls -la build/classes/kotlin/test
       - name: run test
